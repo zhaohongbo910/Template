@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id='wrap'></div>
+		<script type="text/html" id="tp1">
+			<h1><%=title%></h1>
+			<ul>
+				<%for(var i=0;i<list.length;i++){%>
+					
+				<li> 索引:<%=i%>:<%=list[i]%> </li>
+					
+				<%}%>
+			
+			
+			</ul>
+		</script>
+	</body>
+	</html>
+	
+		<script src="baiduTemplate.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			
+			var template = baidu.template;
+			var data = {
+				title: '我是ceo',
+				list: ['马云', '王健林', '刘强东', '麋鹿类']
+			}
+			var html = template('tp1', data);
+			document.getElementById("wrap").innerHTML = html 
+    </script>
